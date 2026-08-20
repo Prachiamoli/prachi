@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Trydo - Creative Agency</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #111;
+        }
+
+        /* ================= NAVBAR ================= */
+
+        nav {
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 5%;
+            background: white;
+        }
+
+        .logo {
+            width: 45px;
+            height: 45px;
+            background: black;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 22px;
+        }
+
+        .logo span {
+            color: #ff1744;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 35px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #111;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .buy-btn {
+            border: 1px solid #111;
+            padding: 10px 18px;
+            background: white;
+            cursor: pointer;
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            height: 430px;
+            background-image:
+                linear-gradient(to right, rgba(0,0,0,0.05), rgba(0,0,0,0.65)),
+                url("https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=1400&q=80");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            padding-right: 8%;
+            color: white;
+        }
+
+        .hero-content {
+            width: 45%;
+        }
+
+        .hero h1 {
+            font-size: 65px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+
+        .red-btn {
+            background: #ff1717;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* ================= FEATURES ================= */
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            padding: 70px 5%;
+        }
+
+        .feature {
+            width: 28%;
+        }
+
+        .feature-icon {
+            color: #ff1744;
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+
+        .feature h2 {
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        .feature p {
+            color: #777;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        /* ================= SERVICES ================= */
+
+        .services {
+            background: #eeeeff;
+            padding: 60px 7%;
+        }
+
+        .services-container {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 30px;
+        }
+
+        .services-intro h2 {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .services-intro p {
+            color: #666;
+            line-height: 1.4;
+            margin-bottom: 15px;
+        }
+
+        .services-intro a {
+            color: blue;
+            text-decoration: none;
+        }
+
+        .service-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .service-card {
+            background: white;
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+
+        .service-card-content {
+            padding: 10px;
+        }
+
+        .service-card h3 {
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+
+        .service-card p {
+            font-size: 12px;
+            color: #777;
+            margin-bottom: 10px;
+        }
+
+        .service-card a {
+            font-size: 13px;
+            color: blue;
+        }
+
+        /* ================= STATISTICS ================= */
+
+        .stats {
+            background:
+                linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.75)),
+                url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1400&q=80");
+
+            background-size: cover;
+            background-position: center;
+
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+
+            padding: 55px 5%;
+        }
+
+        .stat {
+            width: 30%;
+        }
+
+        .stat h2 {
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+
+        .stat p {
+            font-size: 13px;
+            line-height: 1.4;
+        }
+
+        /* ================= TEAM ================= */
+
+        .team {
+            padding: 50px 7%;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .section-description {
+            color: #777;
+            margin-bottom: 30px;
+        }
+
+        .team-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .team-member {
+            text-align: left;
+        }
+
+        .team-member img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+        }
+
+        .team-member h3 {
+            font-size: 15px;
+            margin-top: 8px;
+        }
+
+        .team-member p {
+            color: #777;
+            font-size: 12px;
+        }
+
+        .social {
+            margin-top: 5px;
+            font-size: 13px;
+        }
+
+        /* ================= ABOUT ================= */
+
+        .about {
+            background: #eeeeff;
+            padding: 70px 7%;
+        }
+
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .about ul {
+            list-style: none;
+            color: #777;
+            line-height: 1.6;
+            font-size: 13px;
+        }
+
+        .about li::before {
+            content: "✓";
+            color: #ff1744;
+            margin-right: 8px;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+
+        .play {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            width: 60px;
+            height: 60px;
+
+            border-radius: 50%;
+            background: #ff1744;
+            color: white;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 25px;
+        }
+
+        /* ================= PRICING ================= */
+
+        .pricing {
+            padding: 60px 7%;
+            text-align: center;
+        }
+
+        .pricing-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .price-card {
+            width: 250px;
+            border: 2px solid #ff1744;
+            padding: 30px 25px;
+            text-align: center;
+        }
+
+        .price-card.featured {
+            background: linear-gradient(135deg, #e51b23, #f50057);
+            color: white;
+        }
+
+        .price-card h3 {
+            font-size: 14px;
+        }
+
+        .price {
+            font-size: 50px;
+            font-weight: bold;
+            color: #e52b48;
+            margin: 10px 0;
+        }
+
+        .featured .price {
+            color: white;
+        }
+
+        .price-card small {
+            font-size: 10px;
+        }
+
+        .price-card hr {
+            margin: 20px 0;
+        }
+
+        .price-card ul {
+            list-style: none;
+            text-align: left;
+            font-size: 12px;
+            line-height: 1.8;
+            color: #777;
+        }
+
+        .featured ul {
+            color: white;
+        }
+
+        .price-card li::before {
+            content: "✓";
+            margin-right: 5px;
+        }
+
+        .purchase {
+            margin-top: 20px;
+            padding: 8px 12px;
+            border: 1px solid #ff1744;
+            background: white;
+            color: #ff1744;
+            font-size: 10px;
+        }
+
+        /* ================= CALL TO ACTION ================= */
+
+        .cta {
+            background: linear-gradient(135deg, #e51b23, #f50057);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .cta small {
+            font-weight: bold;
+        }
+
+        .cta h2 {
+            font-size: 50px;
+            margin: 20px 0;
+        }
+
+        .cta button {
+            padding: 12px 20px;
+            background: transparent;
+            color: white;
+            border: 1px solid white;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: black;
+            color: white;
+            padding: 25px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        footer .footer-logo {
+            font-size: 25px;
+        }
+
+        footer .social-icons {
+            display: flex;
+            gap: 10px;
+        }
+
+        footer .social-icons span {
+            border: 1px solid white;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        footer small {
+            font-size: 9px;
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 800px) {
+
+            nav ul {
+                display: none;
+            }
+
+            .hero-content {
+                width: 80%;
+            }
+
+            .hero h1 {
+                font-size: 45px;
+            }
+
+            .features {
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .feature {
+                width: 100%;
+            }
+
+            .services-container {
+                grid-template-columns: 1fr;
+            }
+
+            .service-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .stats {
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .stat {
+                width: 100%;
+            }
+
+            .team-container {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .about-container {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<nav>
+
+    <div class="logo">
+        <span>▮▮▮</span>
+    </div>
+
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Service</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Pages</a></li>
+        <li><a href="#">Block</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+
+    <button class="buy-btn">BUY NOW</button>
+
+</nav>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>AGENCY.</h1>
+
+        <p>
+            There are many variation of passages but the majority
+            have suffered alteration.
+        </p>
+
+        <button class="red-btn">
+            CONTACT US
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FEATURES ================= -->
+
+<section class="features">
+
+    <div class="feature">
+
+        <div class="feature-icon">▱</div>
+
+        <h2>Business strategy</h2>
+
+        <p>
+            I throw Myself down among the grass by the stream
+            as i lie close to the earth.
+        </p>
+
+    </div>
+
+
+    <div class="feature">
+
+        <div class="feature-icon">▤</div>
+
+        <h2>Website<br>Development</h2>
+
+        <p>
+            I throw Myself down among the grass by the stream
+            as i lie close to the earth.
+        </p>
+
+    </div>
+
+
+    <div class="feature">
+
+        <div class="feature-icon">♧</div>
+
+        <h2>Marketing &<br>Reporting</h2>
+
+        <p>
+            I throw Myself down among the grass by the stream
+            as i lie close to the earth.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+
+<section class="services">
+
+    <div class="services-container">
+
+        <div class="services-intro">
+
+            <h2>Services</h2>
+
+            <p>
+                A service is something that the public needs,
+                such as transportation, communications facilities,
+                hospitals, or energy supplies.
+            </p>
+
+            <a href="#">Request Custom Service</a>
+
+        </div>
+
+
+        <div class="service-cards">
+
+
+            <div class="service-card">
+
+                <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=600&q=80">
+
+                <div class="service-card-content">
+
+                    <h3>Thinking<br>Development</h3>
+
+                    <p>
+                        I throw Myself down among the grass by the
+                        stream as i lie close to the earth.
+                    </p>
+
+                    <a href="#">Read More</a>
+
+                </div>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <img src="https://images.unsplash.com/photo-1497215842964-222b430dc094?auto=format&fit=crop&w=600&q=80">
+
+                <div class="service-card-content">
+
+                    <h3>Business<br>Development</h3>
+
+                    <p>
+                        I throw Myself down among the grass by the
+                        stream as i lie close to the earth.
+                    </p>
+
+                    <a href="#">Read More</a>
+
+                </div>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80">
+
+                <div class="service-card-content">
+
+                    <h3>Learning<br>Development</h3>
+
+                    <p>
+                        I throw Myself down among the grass by the
+                        stream as i lie close to the earth.
+                    </p>
+
+                    <a href="#">Read More</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= STATISTICS ================= -->
+
+<section class="stats">
+
+    <div class="stat">
+
+        <h2>333+</h2>
+
+        <p>
+            Lorem ipsum is a pseudo-Latin text used in web design,
+            typography, layout, and printing in place of English.
+        </p>
+
+    </div>
+
+
+    <div class="stat">
+
+        <h2>192+</h2>
+
+        <p>
+            Lorem ipsum is a pseudo-Latin text used in web design,
+            typography, layout, and printing in place of English.
+        </p>
+
+    </div>
+
+
+    <div class="stat">
+
+        <h2>23+</h2>
+
+        <p>
+            Lorem ipsum is a pseudo-Latin text used in web design,
+            typography, layout, and printing in place of English.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= TEAM ================= -->
+
+<section class="team">
+
+    <h2 class="section-title">
+        Managing Team
+    </h2>
+
+    <p class="section-description">
+        There are many variations of passages but the majority
+        have suffered alteration.
+    </p>
+
+
+    <div class="team-container">
+
+
+        <div class="team-member">
+
+            <img src="https://randomuser.me/api/portraits/men/32.jpg">
+
+            <h3>John Jan</h3>
+
+            <p>Sr. Web Developer</p>
+
+            <div class="social">f &nbsp; ♥ &nbsp; in</div>
+
+        </div>
+
+
+        <div class="team-member">
+
+            <img src="https://randomuser.me/api/portraits/women/44.jpg">
+
+            <h3>John Jan</h3>
+
+            <p>Sr. Web Developer</p>
+
+            <div class="social">f &nbsp; ♥ &nbsp; in</div>
+
+        </div>
+
+
+        <div class="team-member">
+
+            <img src="https://randomuser.me/api/portraits/men/32.jpg">
+
+            <h3>John Jan</h3>
+
+            <p>Sr. Web Developer</p>
+
+            <div class="social">f &nbsp; ♥ &nbsp; in</div>
+
+        </div>
+
+
+        <div class="team-member">
+
+            <img src="https://randomuser.me/api/portraits/women/44.jpg">
+
+            <h3>John Jan</h3>
+
+            <p>Sr. Web Developer</p>
+
+            <div class="social">f &nbsp; ♥ &nbsp; in</div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about">
+
+    <div class="about-container">
+
+
+        <div>
+
+            <h2>About</h2>
+
+            <p>
+                Lorem Ipsum is typically a corrupted version of
+                the Latin phrases bonorum et malorum.
+            </p>
+
+            <h4>Lorem ipsum dolor sit.</h4>
+
+            <ul>
+                <li>Wordpress open semantic form of writing</li>
+                <li>Common metal-type printing error</li>
+                <li>Computer graphics 3D references and test model</li>
+                <li>Traditional beginners computer program</li>
+            </ul>
+
+            <br>
+
+            <h4>Lorem ipsum dolor sit.</h4>
+
+            <ul>
+                <li>Wordpress open semantic form of writing</li>
+                <li>Common metal-type printing error</li>
+                <li>Computer graphics 3D references and test model</li>
+                <li>Traditional beginners computer program</li>
+            </ul>
+
+        </div>
+
+
+        <div class="about-image">
+
+            <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=800&q=80">
+
+            <div class="play">▶</div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PRICING ================= -->
+
+<section class="pricing">
+
+    <h2 class="section-title">
+        Pricing Plan
+    </h2>
+
+    <p class="section-description">
+        There are many variation of passages but the majority
+        have suffered alteration.
+    </p>
+
+
+    <div class="pricing-container">
+
+
+        <div class="price-card">
+
+            <h3>Free</h3>
+
+            <div class="price">29</div>
+
+            <small>USD per month</small>
+
+            <hr>
+
+            <ul>
+                <li>Semantic writing</li>
+                <li>Common metal-type</li>
+                <li>Computer graphics</li>
+                <li>Traditional beginners</li>
+                <li>Computer program</li>
+            </ul>
+
+            <button class="purchase">
+                PURCHASE NOW
+            </button>
+
+        </div>
+
+
+        <div class="price-card featured">
+
+            <h3>Free</h3>
+
+            <div class="price">30</div>
+
+            <small>USD per month</small>
+
+            <hr>
+
+            <ul>
+                <li>Semantic writing</li>
+                <li>Common metal-type</li>
+                <li>Computer graphics</li>
+                <li>Traditional beginners</li>
+                <li>Computer program</li>
+            </ul>
+
+            <button class="purchase">
+                PURCHASE NOW
+            </button>
+
+        </div>
+
+
+        <div class="price-card">
+
+            <h3>Free</h3>
+
+            <div class="price">29</div>
+
+            <small>USD per month</small>
+
+            <hr>
+
+            <ul>
+                <li>Semantic writing</li>
+                <li>Common metal-type</li>
+                <li>Computer graphics</li>
+                <li>Traditional beginners</li>
+                <li>Computer program</li>
+            </ul>
+
+            <button class="purchase">
+                PURCHASE NOW
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
+
+<section class="cta">
+
+    <small>READY TO DO THIS</small>
+
+    <h2>Let's go to the work</h2>
+
+    <button>PURCHASE NOW</button>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-logo">
+        <span style="color:#ff1744;">▮▮▮</span>
+        trydo
+    </div>
+
+    <div class="social-icons">
+
+        <span>f</span>
+        <span>in</span>
+        <span>◎</span>
+        <span>◉</span>
+
+    </div>
+
+    <small>
+        Copyright © 2020 Rainbow-Themes. All Rights Reserved.
+    </small>
+
+</footer>
+
+
+</body>
+</html>
